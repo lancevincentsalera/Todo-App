@@ -1,0 +1,27 @@
+.header {
+  font-size: 1.5rem;
+  display: flex;
+  justify-content: space-between;
+  color: white;
+}
+
+.header ul {
+  display: flex;
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+.header ul li {
+  margin-right: 20px;
+  color: #abafb3;
+}
+
+.header ul li:hover {
+  cursor: pointer;
+  color: white;
+}
+
+.header ul .active {
+  color: white;
+}
