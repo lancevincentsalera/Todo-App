@@ -1,19 +1,32 @@
-.taskForm {
-  padding-left: 40px;
+.task-form {
+  margin-top: 2rem;
+  margin-bottom: 4rem;
 }
 
 .enter-task {
-  padding: 10px;
-  width: 500px;
+  font-size: 1.4rem;
+  padding: 1rem 0 1rem 1rem;
+  width: 350px;
+  border: none;
+  border-radius: 3px;
 }
 
 .add-task {
-  margin-left: 10px;
-  padding: 10px;
+  margin-left: 1rem;
+  padding: 1rem 1.5rem;
   color: white;
   background-color: #1eb4f5;
+  border: none;
+  border-radius: 3px;
 }
 
 .add-task:hover {
+  cursor: pointer;
   background-color: #1c8cbc;
+}
+
+.error {
+  color: red;
+  margin-top: 0.5rem;
+  font-size: 1.2rem;
 }

@@ -1,8 +1,12 @@
 .header {
-  font-size: 1.5rem;
   display: flex;
   justify-content: space-between;
   color: white;
+}
+
+.header-date {
+  font-size: 1.6rem;
+  font-weight: 600;
 }
 
 .header ul {
@@ -13,7 +17,8 @@
 }
 
 .header ul li {
-  margin-right: 20px;
+  font-size: 1.6rem;
+  margin-left: 5rem;
   color: #abafb3;
 }
 
@@ -24,4 +29,16 @@
 
 .header ul .active {
   color: white;
+}
+
+.task-number {
+  padding: 0;
+  margin: 0.5rem 0 0 0;
+  color: #61dbfb;
+  font-size: 1.2rem;
+}
+
+span {
+  color: white;
+  font-weight: bold;
 }

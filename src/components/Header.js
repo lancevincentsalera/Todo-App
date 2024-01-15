@@ -1,44 +1,45 @@
-import React, { useState } from "react";
+import React from "react";
 import "../styles/Header.css";
 
-const Header = () => {
+const Header = ({ GetNavStatus, taskCount, nav, NavObjValue }) => {
   const date = new Date();
 
-  const [isActiveItems, setActive] = useState({
-    incomplete: true,
-    complete: false,
-  });
-
   function whenClicked(item) {
-    setActive((current) => {
-      if (item === "incomplete" && !current[item]) {
-        return { [item]: true, complete: false };
-      } else if (item === "complete" && !current[item]) {
-        return { incomplete: false, [item]: true };
-      } else {
-        return { ...current };
-      }
-    });
+    GetNavStatus(item);
+    if (item === "incomplete") {
+      NavObjValue(true, false);
+    } else {
+      NavObjValue(false, true);
+    }
   }
 
   return (
     <div className="header">
-      {date.toLocaleDateString("en-US", { weekday: "long" })},{" "}
-      {date.toLocaleDateString("en-US", { month: "long" })} {date.getDate()}
-      <ul>
-        <li
-          className={isActiveItems.incomplete ? "active" : ""}
-          onClick={() => whenClicked("incomplete")}
-        >
-          Incomplete Tasks
-        </li>
-        <li
-          className={isActiveItems.complete ? "active" : ""}
-          onClick={() => whenClicked("complete")}
-        >
-          Completed Tasks
-        </li>
-      </ul>
+      <div>
+        <div className="header-date">
+          {date.toLocaleDateString("en-US", { weekday: "long" })},{" "}
+          {date.toLocaleDateString("en-US", { month: "long" })} {date.getDate()}
+        </div>
+        <p className="task-number">
+          You have <span>{taskCount}</span> Incomplete Tasks
+        </p>
+      </div>
+      <div>
+        <ul>
+          <li
+            className={nav.incomplete ? "active" : ""}
+            onClick={() => whenClicked("incomplete")}
+          >
+            Incomplete Tasks
+          </li>
+          <li
+            className={nav.complete ? "active" : ""}
+            onClick={() => whenClicked("complete")}
+          >
+            Completed Tasks
+          </li>
+        </ul>
+      </div>
     </div>
   );
 };

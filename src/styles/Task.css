@@ -1,0 +1,61 @@
+.task {
+  display: flex;
+  color: white;
+  font-size: 1.6rem;
+  padding: 3rem 0;
+  border-bottom: 1px solid #8d9196;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.check-and-text {
+  display: flex;
+  align-items: center;
+}
+
+.check-box {
+  margin-right: 2rem;
+  color: #8d9196;
+}
+
+.text {
+  margin: 0;
+  padding: 0;
+}
+
+.delete {
+  color: #8d9196;
+}
+
+.check-box:hover {
+  cursor: pointer;
+  fill: lightgreen;
+}
+
+.delete:hover {
+  cursor: pointer;
+  fill: red;
+}
+
+/* task completed */
+.recover-and-completed-text {
+  display: flex;
+  align-items: center;
+}
+
+.completed-text {
+  margin: 0;
+  padding: 0;
+  color: #8d9196;
+  text-decoration: line-through;
+}
+
+.undo {
+  margin-right: 2rem;
+  color: #8d9196;
+}
+
+.undo:hover {
+  cursor: pointer;
+  fill: lightskyblue;
+}
