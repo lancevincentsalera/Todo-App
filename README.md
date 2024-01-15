@@ -1,3 +1,7 @@
+UI reference from: https://dribbble.com/shots/6570568-Todo-List-App
+1st official React Project :))
+
+
 # Getting Started with Create React App
 
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
